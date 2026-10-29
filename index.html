@@ -282,7 +282,6 @@
         .booking-section {
             padding: 5rem 2rem;
             background: var(--white);
-            id: booking;
         }
 
         .booking-container {
@@ -393,10 +392,11 @@
             border-radius: 12px;
             margin: 1.5rem 0;
             color: #125e2d;
+            text-align: left;
         }
 
         .whatsapp-notice-box strong {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             display: block;
             margin-bottom: 0.3rem;
             color: #0d421f;
@@ -431,6 +431,7 @@
             color: var(--gray);
             cursor: pointer;
             text-decoration: underline;
+            font-size: 1rem;
         }
 
         /* --- Footer --- */
@@ -476,9 +477,9 @@
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#booking">Book Slot</a></li>
+                <li><a href="#booking-section">Book Slot</a></li>
             </ul>
-            <a href="#booking" class="btn-primary">Book Now</a>
+            <a href="#booking-section" class="btn-primary">Book Now</a>
         </div>
     </header>
 
@@ -489,7 +490,7 @@
                 <span class="price-badge"><i class="fa-solid fa-star"></i> Full Service Deal</span>
                 <h1 class="hero-title">Give Your Car The <span>Shine It Deserves</span></h1>
                 <p class="hero-subtitle">Complete inside & outside premium car washing service. Fast, thorough, and convenient booking for your vehicle.</p>
-                <a href="#booking" class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Schedule Your Slot</a>
+                <a href="#booking-section" class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Schedule Your Slot</a>
             </div>
             
             <div class="hero-card" id="pricing">
@@ -511,7 +512,7 @@
                     <li style="margin-bottom: 8px;"><i class="fa-solid fa-check-circle" style="color: var(--primary);"></i> Tire Shine & Rim Care</li>
                 </ul>
 
-                <a href="#booking" class="btn-primary btn-block">Book For 35 AFL</a>
+                <a href="#booking-section" class="btn-primary btn-block">Book For 35 AFL</a>
             </div>
         </div>
     </section>
@@ -525,4 +526,188 @@
 
         <div class="services-grid">
             <!-- Exterior Card -->
-            <div class
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+                <h3>Exterior Wash</h3>
+                <p style="color: var(--gray);">Thorough body cleaning to eliminate dirt, road grime, and spots.</p>
+                <ul>
+                    <li><i class="fa-solid fa-angle-right"></i> High-pressure foam wash</li>
+                    <li><i class="fa-solid fa-angle-right"></i> Hand microfiber drying</li>
+                    <li><i class="fa-solid fa-angle-right"></i> Rim & tire scrub</li>
+                </ul>
+            </div>
+
+            <!-- Interior Card -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-spray-can"></i>
+                </div>
+                <h3>Interior Cleaning</h3>
+                <p style="color: var(--gray);">Deep vacuuming and wiping down for a fresh, dust-free cabin.</p>
+                <ul>
+                    <li><i class="fa-solid fa-angle-right"></i> Complete seat & floor vacuum</li>
+                    <li><i class="fa-solid fa-angle-right"></i> Dashboard & console wipe down</li>
+                    <li><i class="fa-solid fa-angle-right"></i> Streak-free interior glass</li>
+                </ul>
+            </div>
+
+            <!-- Schedule Card -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-calendar-day"></i>
+                </div>
+                <h3>Daily Fixed Slot</h3>
+                <p style="color: var(--gray);">Dedicated daily washing slot designed for maximum convenience.</p>
+                <ul>
+                    <li><i class="fa-solid fa-angle-right"></i> Every day from 3 PM to 4 PM</li>
+                    <li><i class="fa-solid fa-angle-right"></i> Quick 1-hour total turnaround</li>
+                    <li><i class="fa-solid fa-angle-right"></i> Fast WhatsApp confirmation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section" id="booking-section">
+        <div class="booking-container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2>Book Your Wash</h2>
+                <p style="color: var(--gray);">Fill in your details below to lock in your slot.</p>
+            </div>
+
+            <form id="carWashForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" class="form-control" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="e.g. 555-1234" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="carModel">Car Make & Model</label>
+                    <input type="text" id="carModel" class="form-control" placeholder="e.g. Toyota Corolla / Kia Sportage" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookingDate">Select Date</label>
+                    <input type="date" id="bookingDate" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Time Slot</label>
+                    <div class="fixed-time-display">
+                        <i class="fa-solid fa-clock"></i> 3:00 PM - 4:00 PM (Everyday)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Total Price</label>
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">
+                        35 AFL <span style="font-size: 0.9rem; color: var(--gray); font-weight: normal;">(Inside & Outside)</span>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary btn-block">
+                    <i class="fa-solid fa-paper-plane"></i> Submit Booking Request
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal Dialog for WhatsApp Confirmation -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fa-regular fa-circle-check"></i>
+            </div>
+            <h3 class="modal-title">Booking Requested!</h3>
+            <p style="color: var(--gray);">Thank you, <span id="modalCustomerName" style="font-weight: 600; color: var(--dark);"></span>!</p>
+
+            <div class="whatsapp-notice-box">
+                <strong>Important Final Step:</strong>
+                Please msg <strong>6416429</strong> on WhatsApp to confirm your appointment!
+            </div>
+
+            <a id="whatsappBtn" href="#" target="_blank" class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i> Send Message to 6416429
+            </a>
+
+            <br>
+            <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo" style="justify-content: center; color: var(--white);">
+            <i class="fa-solid fa-soap" style="color: var(--secondary);"></i> Keith Car Wash
+        </div>
+        <p>Inside & Outside Car Wash • 35 AFL • Daily Slots 3 PM - 4 PM</p>
+        <p style="margin-top: 1.5rem;">&copy; <span id="year"></span> Keith Car Wash. All rights reserved.</p>
+    </footer>
+
+    <!-- Script / Logic -->
+    <script>
+        // Set minimum date for datepicker to today
+        const dateInput = document.getElementById('bookingDate');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+        dateInput.value = today;
+
+        // Dynamic Copyright Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Form Submit Handler
+        const form = document.getElementById('carWashForm');
+        const modal = document.getElementById('confirmationModal');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get Form Data
+            const name = document.getElementById('fullName').value;
+            const phone = document.getElementById('phone').value;
+            const car = document.getElementById('carModel').value;
+            const date = document.getElementById('bookingDate').value;
+
+            // Update Modal UI
+            document.getElementById('modalCustomerName').textContent = name;
+
+            // Construct WhatsApp Message
+            const whatsappNumber = "2976416429"; 
+            const message = `Hello Keith Car Wash! %0A%0A` + 
+                            `I would like to confirm my car wash booking:%0A` +
+                            `• *Name:* ${encodeURIComponent(name)}%0A` +
+                            `• *Phone:* ${encodeURIComponent(phone)}%0A` +
+                            `• *Car Model:* ${encodeURIComponent(car)}%0A` +
+                            `• *Date:* ${encodeURIComponent(date)}%0A` +
+                            `• *Time Slot:* 3:00 PM - 4:00 PM%0A` +
+                            `• *Service:* Inside & Outside (35 AFL)`;
+
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+            // Attach URL to WhatsApp button
+            document.getElementById('whatsappBtn').href = whatsappUrl;
+
+            // Show Modal
+            modal.style.display = 'flex';
+        });
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside content
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
